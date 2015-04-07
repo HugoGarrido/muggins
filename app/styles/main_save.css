@@ -1,0 +1,37 @@
+/* LOGO CONTAINTER IN HEADER */
+.mugginsMenuLogo{
+	height: auto;
+}
+
+/* NAV CONTAINER - DOIT ETRE AJOUTEE AU SCROLL */
+.mugginsMenuLogoScrolled{
+	background: #fff !important;
+	position: fixed !important;
+	z-index: 1000;
+	border-radius: 0;
+  	border-bottom: 4px solid #E8862D !important;
+}
+
+
+/* POUR QUE LA NAVBAR PRENNE TOUTE LA TAILLE */
+.mugginsNavBar{
+	height: 70px;
+}
+
+.mugginsNavBar li{
+	height: 100%;
+}
+
+.mugginsNavBar li a:hover, .mugginsNavBar li a:active{
+	background-color: #fff; 
+}
+
+.mugginsNavBar li a{
+	line-height: 2.8em;
+}
+
+
+/* RESET BOOTSTRAP */
+.cover .navbar{
+	background-color: transparent;
+}

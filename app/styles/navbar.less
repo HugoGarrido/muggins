@@ -1,0 +1,64 @@
+#mugginsNav{
+	z-index: 1200;
+	.mugginsMenuLogo{
+		height: auto;
+	}
+
+	//scrolled
+	&.mugginsMenuLogoScrolled{
+		background: #fff !important;
+		position: fixed !important;
+		z-index: 1000;
+		border-radius: 0;
+	  	border-bottom: 4px solid @mugginsOrange !important;
+	  	opacity: 0.8;
+	  	z-index: 1200;
+		&:hover, &:active{
+			opacity: 1;
+		}
+		.mugginsNavBar{
+			li{
+				a{
+					font-weight: normal;
+					color: #000;
+				}
+			}	
+		}
+	  	
+	}
+
+	.mugginsNavBar{
+		//height: 70px;
+		height: auto;
+		li{
+			height: 100%;
+			&.active{
+				text-decoration: underline;
+				a{
+					background: none;
+					color: @mugginsOrange !important;
+				}
+			}
+			a{
+				line-height: 2.8em;
+				color: @mugginsOrange;
+				font-weight: bold;
+				
+				&:hover, &:active{
+					.animate;
+					transition-duration : 0.2s;
+					background: @mugginsOrange;
+					color: #fff;
+				}	
+			}
+		}
+	}
+
+	.navbar-collapse.collapse.in{
+		.mugginsNavBar{
+			background: #fff;
+			border-bottom: 4px solid @mugginsOrange !important;
+		}
+	}
+}
+

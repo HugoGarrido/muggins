@@ -1,0 +1,28 @@
+.mugginsFooter{
+	background-color: @mugginsGrey !important;
+	color: #fff;
+	h2{
+		font-family: @MoonType;
+		font-weight: bold;
+	}
+
+	.socialFooter{
+		text-align: center;
+		font-family: @MoonType;
+		color: @mugginsOrange;
+
+		.socialLinks{
+			margin-bottom: 15px;
+
+			a{
+				&:hover, &:active{
+					i{
+						color : @mugginsOrange;
+						.animate;
+						transition-duration : 0.2s;
+					}
+				}
+			}
+		}
+	}
+}

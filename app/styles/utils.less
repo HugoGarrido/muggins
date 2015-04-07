@@ -1,0 +1,99 @@
+//ClearFix
+.group{
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}	
+}
+
+.hidden{
+	opacity: 0;
+	display: none;
+}
+
+.visible{
+	opacity: 1;
+	display: block;
+}
+
+.visibleInline{
+	.visible;
+	display: inline;
+}
+
+
+.mugginsBtn{
+	font-family: @MoonType;
+	font-weight: bold;
+	background: none;
+	border: 4px solid #fff;
+	border-radius: 8px;
+	margin-bottom: 15px;
+	&:hover, &:active{
+		border-color: transparent;
+  		background: @mugginsOrange;
+  		transition-duration : 0.2s;
+  		transition-timing-function : ease-out;
+	}
+
+
+	span{
+		.visibleInline;
+	}
+
+	.hiddenTxt{
+		font-size: inherit !important;
+	}
+
+	i, .hiddenTxt{
+		.hidden;
+	}
+
+	&:hover i, &:active i, &:hover .hiddenTxt, &:active .hiddenTxt{
+		.visibleInline;
+		font-size: 25px;
+	}
+
+	&:hover span, &:active span{
+		.hidden
+	}
+}
+
+.mugginsBtnBlack{
+	.mugginsBtn;
+	border-color: #000;
+	color: #000;
+}
+
+.mugginsBtnOB{
+	.mugginsBtn;
+	&:hover, &:active{
+		background: @mugginsGrey;
+	}
+}
+
+.mugginsHead{
+	text-align: center;
+	font-family: @MoonType;
+	border-bottom: 3px solid #000;
+	padding: 0 10px 15px 10px;
+	margin-bottom: 50px;
+}
+
+.mugginsThumb{
+	display: block;
+	margin-bottom: 15px;
+	img{
+		//border: 4px solid @mugginsOrange; 		
+	}
+	
+}
+
+.no-borders{
+	border: none !important;
+}
+
+.animate{
+	transition : all 0.5s linear;
+}
