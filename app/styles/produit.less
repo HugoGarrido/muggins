@@ -1,0 +1,273 @@
+#mugginsProduit{
+	.no-margin{
+		margin: 0 !important;
+	}
+
+	.rating{
+		font-size: 1.6em;
+		text-align: center;
+		font-style: italic;
+		font-weight: 700;
+		color:@mugginsGrey;
+		
+		.punchline{
+			i{
+				font-size: 0.8em;
+			}
+			margin-bottom: 10px;
+		}
+	}
+
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat 25% center, #f4f4f4 url('../images/cupcake1-2.png') 80% center no-repeat;
+		//background: red;
+		height: 55%;
+		background-size: contain;
+		border: 10px solid #f4f4f4;
+
+		.productTitle{
+			text-align: center;
+			margin-top: 10%;
+			font-family: @MoonType;
+			font-weight: bold;
+
+			.aroundTitle{
+				.padded{
+					padding: 0 15%;
+					margin-bottom: 8px !important;
+				}
+			}
+		}
+
+
+/* 		@media (max-width : 991px){
+	.productCover{
+		//background: url('../images/cupcake1.png') no-repeat 0% center, #f4f4f4 url('../images/cupcake1-2.png') 100% center no-repeat;
+		background-color: red;
+	}
+}
+
+@media (max-width : 900px){
+	.productCover{
+		margin-top: 50px;
+		background: red;
+	}
+}
+
+@media (max-width : 775px){
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat -20% center, #f4f4f4 url('../images/cupcake1-2.png') 130% center no-repeat;
+	}
+}
+
+@media (max-width : 600px){
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat -35% center, #f4f4f4 url('../images/cupcake1-2.png') 165% center no-repeat;
+	}
+}
+
+
+
+@media (min-width : 515px){
+	.productCover{
+		//background: url('../images/cupcake1.png') no-repeat -70% center, #f4f4f4 url('../images/cupcake1-2.png') 210% center no-repeat;
+		background: blue;
+		.container{
+			background: rgba(255,255,255,0.4);
+		}
+
+	}
+} */
+	}
+
+	.productCatching{
+		.descProduit{
+			padding: 10px 22px 20px 22px;
+			background-color: #3d3d3d;
+			color: #fff;
+
+			.mugginsHead{
+				margin-bottom: 6px;
+			}
+			p{
+				padding: 0 5px;
+				margin-top : 4px;
+			}
+		}
+		
+		.mugginsQuote{
+			width: 70%;
+			margin: 15px auto;
+			border: 2px solid #f4f4f4;
+			padding: 18px 25px;
+			border-radius: 5px;
+
+			.hashtag{
+				color: @mugginsOrange;
+			}
+		}
+
+		.rating{
+			font-size: 1.6em;
+			text-align: center;
+			font-style: italic;
+			font-weight: 700;
+			margin-top: 30px;
+			color:@mugginsGrey;
+			
+			.punchline{
+				i{
+					font-size: 0.8em;
+				}
+				margin-bottom: 10px;
+			}
+		}	
+	}
+
+	.productRaison{
+		.padded{
+			padding: 30px;
+		}
+
+		.imageOther{
+			margin-top: 70px;
+		}
+
+		ul{
+			list-style: none;
+			
+			li{
+				margin-bottom: 15px;
+				color: @mugginsGrey;
+
+				.catch{
+					font-size: 1.6em;
+					font-weight: bold;
+					margin-bottom: 4px;
+				}
+
+				.expl{
+					width: 80%;
+					font-size: 1.1em;
+					padding-left: 24px;
+				}
+			}
+		}
+	}
+
+	.productProposal{
+		background: #f4f4f4;
+
+		.row{
+			margin: 15px 0;
+		}
+		
+		.mugginsHead{
+			margin-bottom: 0px;
+			padding-bottom: 0;
+		}
+
+		.mugginsThumbnail{
+			margin-top: 15px;
+			padding: 26px;
+			
+			img{
+				margin: 0 auto;
+			}
+
+			.caption{
+				margin-top: 10px;
+			}
+
+			.goProduct{
+				font-family: @MoonType;
+				color: @mugginsGrey;
+				text-decoration: none;
+				display: block;
+				padding: 20px 9px 8px 9px;
+
+				.txtPtrn{
+					margin-top: 8px;
+					margin-bottom: 15px;
+				}
+
+				&:hover, &:active{
+					.patternScieLitteGrey{
+						&:after, &::after{
+							background-position: center -12px;
+						}
+					}
+					background: @mugginsGrey;
+					color: #fff;
+				}
+			}
+		}
+	}
+	
+}
+@media (min-width : 992px){
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat 25% center, #f4f4f4 url('../images/cupcake1-2.png') 80% center no-repeat; 
+	}
+}
+
+@media (max-width : 990px){
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat 0% center, #f4f4f4 url('../images/cupcake1-2.png') 100% center no-repeat !important;
+		background-size: contain; 
+		padding-top: 30px !important; 
+		.container{
+			background: rgba(255,255,255,0.4);
+			padding-bottom: 35px;
+		}
+		//background: red !important;
+	}
+}
+
+@media (max-width:700px){
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat -70% center, #f4f4f4 url('../images/cupcake1-2.png') 210% center no-repeat !important;
+		background-size: contain; 
+	}
+}
+
+
+@media (max-width : 775px){
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat -20% center, #f4f4f4 url('../images/cupcake1-2.png') 130% center no-repeat !important;
+		background-size: contain; 
+	}
+}
+
+@media (max-width : 600px){
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat -62% center, #f4f4f4 url('../images/cupcake1-2.png') 375% center no-repeat !important;
+		background-size: contain; 
+	}
+}
+
+
+
+@media (max-width : 515px){
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat -24% center, #f4f4f4 url('../images/cupcake1-2.png') 168% center no-repeat !important;
+		.container{
+			background: rgba(255,255,255,0.4);
+		}
+
+	}
+}
+
+
+@media (max-width : 395px){
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat -250% center, #f4f4f4 url('../images/cupcake1-2.png') -180% center no-repeat !important;
+	}
+}
+
+@media (max-width : 350px){
+	.productCover{
+		background: url('../images/cupcake1.png') no-repeat 240% center, #f4f4f4 url('../images/cupcake1-2.png') -80% center no-repeat !important;
+	}
+}
+

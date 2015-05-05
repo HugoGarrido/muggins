@@ -1,0 +1,214 @@
+#mugginsCommander{
+
+	.overHead{
+		margin-bottom: 0px;
+		margin-top: 0px;
+		padding-bottom: 0px;
+		padding: 40px 0px;
+		font-size: 3.2em;
+	}
+
+	.topping{
+		font-size: 1.8em;
+		line-height: 60px;
+		margin-bottom: 65px;
+
+		&.mugginsBtn{
+			background: @mugginsOrange;
+			border-color: @mugginsOrange;
+
+			&:hover, &:active, &:focus{
+				background: @mugginsGrey;
+				border-color: @mugginsGrey; 
+			}
+		}
+		
+		&:first-child{
+			margin-top: 25px;
+		}
+	}
+	
+	.container-fluid{
+		padding-left: 0;
+		padding-right: 0;
+		z-index: 900;
+
+		.no-margin{
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+
+		.mugginsThumbnail{
+			margin-top: 15px;
+			display: block;
+			text-decoration: none;
+
+			&:hover, &:active{
+				.goProduct{
+					.patternScieLitteGrey{
+						&:after, &::after{
+							background-position: center -12px;
+						}
+					}
+					background: @mugginsGrey;
+					color: #fff;
+				}
+			}
+
+			.caption{
+				margin-top: 10px;
+			}
+
+			.goProduct{
+				font-family: @MoonType;
+				color: @mugginsGrey;
+				text-decoration: none;
+				display: block;
+				padding: 8px 9px;
+
+				.txtPtrn{
+					margin-top: 8px;
+				}
+				
+
+				.patternScieLitteGrey{
+					&:after, &::after{
+						margin-top: 8px;
+					}
+				}
+
+				.animate;
+				transition-duration: 0.2s;
+			}
+		}
+	}
+
+
+	#productSelect{
+		background: #f4f4f4;
+	}
+
+	#toppingSelect{
+		background: #f4f4f4; 
+	}
+
+	#infosSelect{
+		background: #f4f4f4;;
+	}
+
+	.infoArea{
+		.group{
+			margin: 0 auto;
+			width: 94%;
+			margin-bottom: 40px;
+
+			&.forsubmit{
+				width: 60%;
+				button{
+					border-color: transparent; 
+					display: block;
+					margin: 0 auto;
+					background-color: @mugginsOrange;
+					color: #fff;
+					height: 68px;
+					width: 100%;
+					font-size: 1.4em;
+					.animate;
+					&:hover, &:active{
+						background-color: @mugginsGrey;
+						transition-duration: 0.2s;
+					}
+				}
+			}
+
+			&.forTime{
+				text-align: center;
+  				font-size: 1.6em;
+  				color: @mugginsOrange;
+  				font-family: @MoonType;
+  				font-weight: bold;
+			}
+
+			label{
+				font-family: @MoonType;
+				width: 16%;
+				text-align: center;
+				color: #fff;
+				font-size: 2.0em;
+				color: @mugginsOrange;
+			}
+
+			input{
+				border: none;
+				padding: 12px;
+				border-radius: 4px;
+				border: 2px solid #bbb;
+				box-shadow: none;
+				width: 80%;
+				margin-left: 12px;
+				font-size: 1.2em;
+			}
+			.forTxtArea{
+				vertical-align: top;
+			}
+			textarea{
+				width: 80%;
+				height: 200px;
+				border-radius: 4px;
+				border: 2px solid #bbb;
+				margin-left: 12px;
+				resize: none;
+			}
+		}
+	}
+
+	#commandeNavigation{
+		padding: 15px 0; 
+		text-align: center;
+		font-size: 1.4em;
+	}
+	a{
+		text-decoration: none;
+		.clickTruc{
+		display: block;
+		color: @mugginsGrey;
+		font-weight: bold;
+		.animate;
+		transition-duration: 0.2s;
+		padding: 8px 0;
+		cursor: pointer;
+		
+		border-radius: 4px;
+		&:active, &:hover, &:focus{
+			background-color: @mugginsOrange;
+			color: #fff;
+		}
+	}	
+	}
+	
+
+	.owl-pagination{
+		display: none;
+	}
+
+	#topping, #cake{
+		text-transform: uppercase;
+		font-family: @MoonType;
+		color: @mugginsOrange;
+	}
+
+	#recap{
+		padding-top: 8px;
+		color: @mugginsGrey;
+	}
+
+
+	.scrolledCommande{
+		position: fixed;
+		top: 0px;
+		z-index: 10000;
+		width: 100%;
+		background: #fff;
+		border-bottom: 4px solid @mugginsOrange;
+	}
+}

@@ -1,0 +1,108 @@
+#mugginsRecettes{
+	.patternScieLitteGrey:after, .patternScieLitteGrey::after{
+		margin-top: 5px !important;
+	}
+
+	ul{
+		list-style: none !important;
+	}
+	
+	.cover{
+		.sectionPara{
+			padding-top: 18px;
+			margin-top: 25px;
+		}
+
+		.navbar{
+			//background: rgba(255,255,255, 0.06) !important;
+		}
+	}
+
+	.sectionForProducts{
+		background:#f4f4f4;
+		
+		.row{
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+			
+
+		.aboutCollection{
+			padding-top: 15px;
+			padding-bottom: 15px;
+			color: #fff;
+
+			.descCollect{
+				margin-top: 50px;
+ 				padding: 10px 10px 20px 10px;
+				background: @mugginsOrange;
+
+				.mugginsHead{
+					margin-bottom: 8px;
+				}
+
+				p{
+					padding-right: 10px;
+					text-align: center;
+				}
+			}
+
+			.descCollectGrey{
+				.descCollect;
+				background-color: @mugginsGrey; 
+			}
+			
+		}
+
+		.showProducts{
+			background: #f4f4f4;
+			margin-bottom: 0;
+			cursor: move;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			overflow: hidden;
+			li{
+				/* left : 0;
+				background: red;
+				border-right: 1px solid @mugginsGrey; */
+			}
+			.mugginsThumbnail{
+				margin-top: 15px;
+				display: block;
+				text-decoration: none;
+
+				&:hover, &:active{
+					.goProduct{
+						.patternScieLitteGrey{
+							&:after, &::after{
+								background-position: center -12px;
+							}
+						}
+						background: @mugginsGrey;
+						color: #fff;
+					}
+				}
+				
+				.caption{
+					margin-top: 10px;
+				}
+
+				.goProduct{
+					font-family: @MoonType;
+					color: @mugginsGrey;
+					text-decoration: none;
+					display: block;
+					padding: 8px 9px;
+
+					.txtPtrn{
+						margin-top: 8px;
+					}
+						
+					.animate;
+					transition-duration: 0.2s;
+				}
+			}
+			
+		}
+	}
+}

@@ -3,22 +3,73 @@
     
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+        <meta name="viewport" content="initial-scale=1">
         <script type="text/javascript" src="js/jquery.min.js"></script>
-        
-        <!--<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+        <script src="js/greensocks/plugins/CSSPlugin.min.js"></script>
+        <script src="js/greensocks/easing/EasePack.min.js"></script>
+        <script src="js/greensocks/TweenLite.min.js"></script> 
+        <script src="js/greensocks/jquery.gsap.min.js"></script>
+
+        <script type="text/javascript" src="js/script.min.js"></script>
         
-        <script type="text/javascript" src="js/script.js"></script>
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="styles/fa/css/font-awesome.m" type="text/css">
-        <!--<link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">-->
-        <link href="styles/bootstrap.css" rel="stylesheet" type="text/css">
-        <!-- pROD -->
-        <!--<link href="styles/main.css" rel="stylesheet" type="text/css">-->
-        <!-- PREPROD -->
-        <link href="/styles/main.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="styles/main.min.css" rel="stylesheet" type="text/css">
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+
+        <script>
+            function initialize() {
+                var mapOptions = {
+                    zoom: 18,
+                    center: new google.maps.LatLng(48.850559, 2.368836),
+                    disableDefaultUI: true,
+                    zoomControl: false,
+                    draggable: true,
+                    scaleControl: true,
+                    scrollwheel: false,
+                    disableDoubleClickZoom: true,
+                }
+
+                var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+                var myLatLng = new google.maps.LatLng(48.850559, 2.368836);
+                var mugginsMarker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    icon: 'images/muggins_map.png'
+                });
+            }
+
+            function loadScript() {
+              var script = document.createElement('script');
+              script.type = 'text/javascript';
+              script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+                  '&signed_in=true&callback=initialize';
+              document.body.appendChild(script);
+            }
+
+            window.onload = loadScript;
+        </script>    
     </head>
     
     <body id="mugginsHome">
@@ -27,30 +78,33 @@
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                            <span class="sr-only" style="font-size:2.2em">Toggle navigation</span>
+                            <span><i class="fa fa-coffee visibleIcon"></i></span>
                         </button>
-                        <a class="navbar-brand mugginsMenuLogo" href="#">
+                        <a class="navbar-brand mugginsMenuLogo" href="index.html">
                             <span>
-                                <img src="images/logo_ligne_full.png" height="40px">
+                                <img src="images/logo_ligne_full.png" height="45px" class="hidden-sm hidden-xs" alt="Quick'n'Muggin's">
+                                <img src="images/logo_ligne_full_tab.png" height="45px" class="hidden-md hidden-lg hidden-xs" alt="Quick'n'Muggin's">
+                                <img src="images/logo_ligne_full_phone.png" height="45px" class="hidden-sm hidden-md hidden-lg" alt="Quick'n'Muggin's">
                             </span>
                         </a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-ex-collapse">
                         <ul class="nav navbar-nav navbar-right mugginsNavBar">
                             <li class="active">
-                                <a href="#">Home</a>
+                                <a href="index.html">Home</a>
                             </li>
                             <li>
-                                <a href="#">Nos Recettes</a>
+                                <a href="recettes.html">Nos Recettes</a>
                             </li>
                             <li>
-                                <a href="#">Nos Mugs</a>
+                                <a href="mugs.html">Nos Mugs</a>
                             </li>
                             <li>
-                                <a href="#">Commander</a>
+                                <a href="commander.html">Commander</a>
+                            </li>
+                            <li>
+                                <a href="blog.html">Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -60,28 +114,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 class="text-inverse">
-                            <!--<img src="images\logo_full.png">-->
-                            <img class="mugginsMegaLogo" src="images\logo_full.svg">
+                        <h1 class="text-inverse titleLogo" title="Quick'n'Muggin's">
+                            <img class="mugginsMegaLogo" src="images/logo_full.svg">
                         </h1>
                         <p class="text-center text-inverse coverP">
-                            Quick'n'Muggin's c'est le seul coffee shop qui vous veut du bien !
-                            <br>
-                            On a pris le meilleur des gateaux et on les a mis dans de beaux mugs. 
+                            Chez Quick'n'Muggin's on prend le meilleur des gateaux et on le met dans de beaux mugs. 
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <a class="btn btn-block btn-lg btn-primary mugginsBtn" contenteditable="true">
+                        <a class="btn btn-block btn-lg btn-primary mugginsBtn goModal" href="#">
                             <span>Parlez de Nous</span>
-                            <i class="fa fa-fw fa-lg fa-heart-o text-inverse"></i>
+                            <span class="hiddenTxt">Bla Bla Bla !</span>
                         </a>
                     </div>
                     <div class="col-md-6">
-                        <a class="btn btn-block btn-lg btn-primary mugginsBtn" contenteditable="true">
+                        <a class="btn btn-block btn-lg btn-primary mugginsBtn goMap" href="#">
                             <span>Nous Trouver</span>
-                            <i class="fa fa-fw fa-lg fa-location-arrow text-inverse"></i>
+                            <span class="hiddenTxt">C'est par la !</span>
                         </a>
                     </div>
                 </div>
@@ -89,7 +140,7 @@
         </div>
 
 
-        <div class="section sectionSeparator">
+        <div class="section sectionSeparator bgSeparatorPeople">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
@@ -103,44 +154,30 @@
             <div class="sectionBgInfo">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <h3 class="mugginsHead">Des recettes gourmandes</h3>
+                        <div class="col-md-4 col-md-offset-6">
+                            <h3 class="mugginsHead"><div class="patternPlot3">Des recettes gourmandes</div></h3>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <!--<div class="col-md-6">-->
+                        <div class="col-md-4 col-md-offset-6">
                             <div class="sectionPara">
-                                <p class="text-left">
-                                    Nous à Quick'n'Muggin's on aime les bonnes vieilles recettes de nos mamies mais on est aussi ouverrt à la nouveauté...
-                                </p>
                                 <p class="text-left">    
-                                    C'est pour ça que, tout les jours, on réfléchit à comment mettre les meilleures recettes de gateaux dans nos mugs, qu'elles soient avant gardistes ou old school.
+                                    Nous à Quick'n'Muggin's on réfléchit tous les jours à comment mettre les meilleures recettes de gateaux dans nos mugs, qu'elles soient avant gardistes ou old school.
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-md-offset-1">
-                            <a class="btn btn-block btn-lg btn-primary mugginsBtnBlack">
-                                <span>Voir toutes nos Recettes</span>
+                    </div>
+                    <div class="row">    
+                        <div class="col-md-4 col-md-offset-6">
+                            <a class="btn btn-block btn-lg btn-primary mugginsBtnBlack" href="recettes.html">
+                                <span>Voir toutes nos Recettes <i class="fa fa-spoon visibleIcon"></i></span>
                                 <span class="hiddenTxt">A vos risques et perils</span>
 
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container thumbContainer">
-                <div class="row">
-                    <div class="col-md-4">
-                        <a class="mugginsThumb" href="#"><img src="images/mug.jpg" class="center-block img-responsive"></a>
-                    </div>
-                    <div class="col-md-4 hidden-sm">
-                        <a class="mugginsThumb" href="#"><img src="images/mug2.jpg" class="img-responsive"></a>
-                    </div>
-                    <div class="col-md-4 hidden-sm">
-                        <a class="mugginsThumb" href="#"><img src="images/mug3.jpg" class="center-block img-responsive"></a>
-                    </div>
-                </div>   
-                
             </div>
         </div>
 
@@ -149,94 +186,92 @@
             <div class="sectionBgInfo" style="background:url(images/coverSection3.jpg) no-repeat center center">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <h3 class="mugginsHead">Des Mugs uniques</h3>
+                        <div class="col-md-4 col-md-offset-1">
+                            <h3 class="mugginsHead"><div class="patternPlot3">Des Mugs uniques</div></h3>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4 col-md-offset-1">
                             <div class="sectionPara">
                                 <p class="text-left">
-                                    Chez Quick'n'Muggin's on aime ce qui est bon mais on aime surtout ce qui est beau. C'est pour ça que'on a enlevé le "iques" de nos mugs classiques, pour vous servir nos recettes dans les plus beaux écrins.
-                                </p>
-                                <p class="text-left">
-                                    Et parce qu'on est aussi des collectionneurs, on collabore régulièrement avec de nouveaux designers pleins de talents! 
+                                    On est plus classe que classique, on vous offre les meilleurs recettes dans les plus beaux mugs.
+                                    <br>Et puis, on collabore régulièrement avec de nouveaux designers pleins de talents !
                                 </p>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">    
                         <div class="col-md-4 col-md-offset-1">
-                            <a class="btn btn-block btn-lg btn-primary mugginsBtnBlack">
-                                <span>Voir tous nos Mugs</span>
-                                <span class="hiddenTxt">La nouvelle definition du Cool</span>
+                            <a class="btn btn-block btn-lg btn-primary mugginsBtnBlack"  href="mug.html">
+                                <span>Voir tous nos Mugs <i class="fa fa-coffee visibleIcon"></i></span>
+                                <span class="hiddenTxt">Le nouveau Cool</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container thumbContainer">
-                <div class="row">
-                    <div class="col-md-4 hidden-sm">
-                        <a class="mugginsThumb" href="#"><img src="images/mug.jpg" class="center-block img-responsive"></a>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="mugginsThumb" href="#"><img src="images/mug2.jpg" class="img-responsive"></a>
-                    </div>
-                    <div class="col-md-4 hidden-sm">
-                        <a class="mugginsThumb" href="#"><img src="images/mug3.jpg" class="center-block img-responsive"></a>
-                    </div>
-                </div>   
-                
-            </div>
         </div>
 
-        <div class="section sectionSeparator">
+        <div class="section sectionSeparator bgSeparatorSocial">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h2>Nous sommes des gens connectes !</h2>
+                        <h2><i class="fa fa-hand-o-right hidden-sm hidden-xs"></i> Nous sommes des gens connectes ! <i class="fa fa-hand-o-left hidden-sm hidden-xs"></i></h2>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="section twitterReview">
-            <div class="controlTwitter" id="toLeft">
-                <i class="fa fa-chevron-left"></i>
-            </div>
-            <div class="container">
-                
-                <div class="row">
-                    <div class="col-md-4 hidden-sm hidden-xs">
-                        <blockquote class="mugginsQuote">
-                            <p>C'était très bon et tellement cool !</p>
-                            <footer>@Jean_Michel</footer>
-                        </blockquote>
+
+
+        <div class="section">
+            <div class="sectionBgInfo" style="background:url(images/coverSection4.jpg) no-repeat center 90%; background-size: cover;">
+        
+                <div class="section twitterReview">
+                    <div class="controlTwitter hidden" id="toLeft">
+                        <i class="fa fa-angle-left"></i>
                     </div>
-                    <div class="col-md-4 col-xs-8 col-sm-8">
-                        <blockquote class="mugginsQuote">
-                            <p>J'aime Muggin's autant que je peux aimer ma mère ou quelqu'un de ma famille</p>
-                            <footer>@WebDesignFunky</footer>
-                        </blockquote>
+                    <div class="container">
+                        
+                        <div class="row">
+                            <div class="col-md-4 hidden-sm hidden-xs">
+                                <blockquote class="mugginsQuote">
+                                    <p>C'était très bon et tellement cool !</p>
+                                    <footer>@Jean_Michel</footer>
+                                    <div class="patternScieOrange"></div>
+                                </blockquote>
+                            </div>
+                            <div class="col-md-4">
+                                <blockquote class="mugginsQuote">
+                                    <p>J'aime Muggin's autant que je peux aimer ma mère ou quelqu'un de ma famille</p>
+                                    <footer>@WebDesignFunky</footer>
+                                    <div class="patternScieOrange"></div>
+                                </blockquote>
+                            </div>
+                            <div class="col-md-4 hidden-xs hidden-sm">
+                                <blockquote class="mugginsQuote">
+                                    <p>J'espère que mon texte servira de placeholder !</p>
+                                    <footer>@TristeVie</footer>
+                                    <div class="patternScieOrange"></div>
+                                </blockquote>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div class="col-md-4 hidden-xs hidden-sm">
-                        <blockquote class="mugginsQuote">
-                            <p>J'espère que mon texte servira de placeholder!</p>
-                            <footer>@TristeVie</footer>
-                        </blockquote>
+                    <div class="controlTwitter hidden" id="toRight">
+                        <i class="fa fa-angle-right"></i>
                     </div>
                 </div>
-                
-            </div>
-            <div class="controlTwitter" id="toRight">
-                <i class="fa fa-chevron-right"></i>
+
+
             </div>
         </div>
-
+        
         <div class="section promoContainer sectionSeparator">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
-                        <a class="btn btn-block btn-lg btn-primary mugginsBtnOB" contenteditable="true" data-toggle="modal">
+                        <a class="btn btn-block btn-lg btn-primary mugginsBtnOB goModal" data-toggle="modal" href="#">
                             <span>Parlez de nous !</span>
                             <span class="hiddenTxt">Oui Oui Oui !</span>
                         </a>
@@ -250,17 +285,19 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mapBlockInfo">
-                            <h3>Acces</h3>
+                            <h3>
+                                <div class="patternScieWhite">Acces</div>
+                            </h3>
                             <p> 
                                 Quick'n'Muggin's
                                 <br>36 Boulevard de la Bastille
-                                <br>75012 Paris
-                                <br>Metro:
-                                <br>1 2 3 4
+                                <br>Metro: <span class="badge metroLabel" style="background: #FFCE00">1</span> <span class="badge metroLabel" style="background: #F19042">5</span> <span class="badge metroLabel" style="background: #CDACCE">8</span>
                             </p>    
                         </div>
                         <div class="mapBlockInfo">
-                            <h3>Overture</h3>
+                            <h3>
+                                <div class="patternScieWhite">Ouverture</div>
+                            </h3>
                             <p>
                                 Du Lundi au Samedi
                                 <br>9h30 - 20h30
@@ -271,37 +308,40 @@
             </div>
 
             <div class="mapContainer">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d656.3530727495594!2d2.3683902819122262!3d48.85034797228724!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6720228ecf38b%3A0x2797c8ed33f3af59!2s36+Boulevard+de+la+Bastille%2C+75012+Paris!5e0!3m2!1sfr!2sfr!4v1428353675104" width="800" height="600" frameborder="0" style="border:0"></iframe>
+                <div id="map-canvas"></div>
             </div>
         </div>
         <footer class="mugginsFooter">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <h2>Quick'n'Muggin's</h2>
+                    <div class="col-md-6">
+                        <h2>Quick'n'<span class="mugginsOrangeText">Muggin's</span></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                        <p class="socialFooter">Mugcakes for the people since 2015</p>
                         <p>
-                            Quick'n'Muggin's, se sont les meilleurs gâteau dans les plus beaux mugs.
-                            <br>Ouverture : du Lundi au Samedi - 9h30 à 20h30
-                            <br>36 Boulevard de la Bastille
-                            <br>75012 Paris
-                            <br> Metro : 1 2 3 4
+                            Ouverture : du Lundi au Samedi - 9h30 à 20h30
+                            <br>
+                            36 Boulevard de la Bastille - 75012 Paris
+                            <br>
+                            Metro : <span class="badge metroLabel" style="background: #FFCE00">1</span> <span class="badge metroLabel" style="background: #F19042">5</span> <span class="badge metroLabel" style="background: #CDACCE">8</span>
                         </p>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
                         <div class="socialFooter">
-                            <p>Amour <span style="font-weight:bold">X</span> Design <span style="font-weight:bold">X</span> Cholocat <span style="font-weight:bold">X</span> Follow</p>
+                            <p>Amour <span style="font-weight:bold">X</span> Cholocat <span style="font-weight:bold">X</span> Follow</p>
                             
                             <div class="socialLinks">
                                 <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
                                 <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
                                 <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
                             </div>
-                            
-                            <p>Mugcakes for the people since 2015</p>
-                        </div>
-                            
+                        </div>    
                     </div>
                 </div>
             </div>
         </footer>
     </body>
-
 </html>

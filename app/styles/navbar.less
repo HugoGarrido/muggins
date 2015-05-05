@@ -1,8 +1,39 @@
 #mugginsNav{
 	z-index: 1200;
 	.mugginsMenuLogo{
-		height: auto;
+		padding: 10px 15px;
+		line-height: 45px;
+		height: 80px;
+	  	//width: 310px;
+	  	width: auto;
+		span{
+			/* background: url(../images/muggins_logo_resp.svg) no-repeat center 0;
+			height: 55px;
+			display: block;
+			background-size: cover; */
+			img{
+				//height: 100%;
+				/* display: none;
+				background: yellow; */
+			}
+		}
 	}
+
+	/* @media (max-width : 991px){
+		.mugginsMenuLogo{
+			span{
+				background-position-y: -56px; 
+			}
+		}
+	}
+	
+	@media (max-width : 500px){
+		.mugginsMenuLogo{
+			span{
+				background-position-y: -106px; 
+			}
+		}
+	} */
 
 	//scrolled
 	&.mugginsMenuLogoScrolled{
@@ -11,32 +42,34 @@
 		z-index: 1000;
 		border-radius: 0;
 	  	border-bottom: 4px solid @mugginsOrange !important;
-	  	opacity: 0.8;
+	  	opacity: 0.93;
 	  	z-index: 1200;
+	  	width: 100%;
 		&:hover, &:active{
+			.animate;
+			transition-duration : 0.2s;
 			opacity: 1;
 		}
 		.mugginsNavBar{
-			li{
-				a{
-					font-weight: normal;
-					color: #000;
-				}
-			}	
-		}
-	  	
+			text-align: center;
+		}	
 	}
 
 	.mugginsNavBar{
-		//height: 70px;
 		height: auto;
 		li{
 			height: 100%;
 			&.active{
-				text-decoration: underline;
+				
 				a{
 					background: none;
 					color: @mugginsOrange !important;
+					.patternPlotLitteOrange;
+
+					&:hover, &:active{
+						background: @mugginsOrange !important; 
+						color: #fff !important;
+					}
 				}
 			}
 			a{
@@ -46,6 +79,7 @@
 				
 				&:hover, &:active{
 					.animate;
+					.patternPlotLitteWhite;
 					transition-duration : 0.2s;
 					background: @mugginsOrange;
 					color: #fff;
@@ -54,10 +88,47 @@
 		}
 	}
 
-	.navbar-collapse.collapse.in{
+	@media (max-width: 768px){
 		.mugginsNavBar{
 			background: #fff;
-			border-bottom: 4px solid @mugginsOrange !important;
+			li{
+				padding: 0 60px;
+				font-size: 1.4em;
+				text-align: center;
+				&.active{
+					a{
+						&:hover{
+							background-color: @mugginsOrange;		
+						}
+					}
+				}
+
+				a{
+					font-weight: normal;
+					color: #000;
+
+					&::after, &:after{
+						display: block;
+						bottom: 3px;
+						position: absolute;
+					}
+				}
+
+			}
+		}
+	}
+
+	.navbar-toggle{
+		font-size: 2.0em;
+		color: @mugginsGrey;
+		border: 1px solid transparent;
+		padding: 9px 14px;
+		&:hover, &:active{
+			.animate;
+			transition-duration: 0.2s;
+			border-color: @mugginsOrange;
+			color: @mugginsOrange;
+			border-radius: 3px; 
 		}
 	}
 }

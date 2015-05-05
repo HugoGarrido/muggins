@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             tasks : ['css']
         },
         livereload : {
-            files : ['.tmp/styles/main.css', 'app/index.html'],
+            files : ['.tmp/styles/main.css', 'app/*.html'],
             options : {
                 livereload : true,
             },

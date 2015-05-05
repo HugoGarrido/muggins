@@ -1,0 +1,38 @@
+#containerForModal{
+	position: fixed;
+	width: 100%;
+	.mugginsModal{
+		background: #fff;
+		padding: 15px 34px;
+		border-radius: 5px;
+		color: @mugginsGrey;
+		box-shadow: 2px 3px 16px -1px #151515;
+		p{
+			width: 80%;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		h2.mugginsHead{
+			margin-bottom: 10px;
+		}
+
+		h3.mugginsHead{
+			margin-bottom: 10px;
+		}
+
+		.socialLinks{
+			margin: 0 auto 25px;
+  			text-align: center;
+  			a{
+  				color: @mugginsGrey;
+  				.animate;
+  				transition-duration: 0.2s;
+  				&:hover, &:active, &:focus{
+  					color: @mugginsOrange;
+  					background: none;
+  				}
+  			}
+		}
+	}
+}

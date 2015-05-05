@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+        <script src="js/greensocks/plugins/CSSPlugin.min.js"></script>
+        <script src="js/greensocks/easing/EasePack.min.js"></script>
+        <script src="js/greensocks/TweenLite.min.js"></script> 
+        <script src="js/greensocks/jquery.gsap.min.js"></script>
+
+        <script type="text/javascript" src="js/script.min.js"></script>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="styles/owl/owl.carousel.css" rel="stylesheet" type="text/css">
+        <link href="styles/owl/owl.theme.css" rel="stylesheet" type="text/css">
+        
+        <link href="styles/main.min.css" rel="stylesheet" type="text/css">
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+    </head>
+    
+    <body id="mugginsBlog">
+        <header>
+            <div class="navbar" id="mugginsNav">
+                <div class="container" style="background:rgba(255, 255, 255, 0.06)">
+                    <div class="navbar-header">
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                           <span class="sr-only"style="font-size:2.2em">Toggle navigation</span>
+                           <span><i class="fa fa-coffee visibleIcon"></i></span>
+                       </button>
+                       <a class="navbar-brand mugginsMenuLogo" href="index.html">
+                           <span>
+                                <img src="images/logo_ligne_full.png" height="45px" tittle="Quick'n'Muggin's" class="hidden-sm hidden-xs">
+                                <img src="images/logo_ligne_full_tab.png" height="45px" tittle="Quick'n'Muggin's" class="hidden-md hidden-lg hidden-xs">
+                                <img src="images/logo_ligne_full_phone.png" height="45px" tittle="Quick'n'Muggin's" class="hidden-sm hidden-md hidden-lg">
+                           </span>
+                       </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                        <ul class="nav navbar-nav navbar-right mugginsNavBar">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="recettes.html">Nos Recettes</a>
+                            </li>
+                            <li>
+                                <a href="mugs.html">Nos Mugs</a>
+                            </li>
+                            <li>
+                                <a href="commander.html">Commander</a>
+                            </li>
+                            <li class="active">
+                                <a href="blog.html">Blog</a>
+                            </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="section" id="blogHeader">
+            <div class="container-fluid">
+                <h1>
+                    <span class="hidden-xs">
+                        Qu<span class="hidden-sm">i</span>ck'n'Bl<span class="hidden-sm">o</span>g<span class="hidden-sm">i</span>ng
+                    </span>
+                    <span class="hidden-sm hidden-md hidden-lg">Blog</span>
+                </h1>
+            </div>
+        </div>
+
+
+
+        <div class="section" id="articlesMinSlides">
+            <div class="container-fluid">
+                <div class="owl-carousel" id="mugginsArticlesDisplay">
+                    <div class="articleMin" style="background-image: url(images/cover_home.jpg)">
+                        <div class="infosArticle">
+                            <h3 class="mugginsHead patternScieOrange"><a href="article.html">Article 1</a></h3>
+                            <p class="shortDesc">
+                                Un article sur des choses cools
+                            </p>
+                            <ul class="catList">
+                                <li><a href="#food">Food</a> - </li>
+                                <li><a href="#design">Design</a> - </li>
+                                <li><a href="#social">Social</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="articleMin" style="background-image: url(images/coverSection.jpg)">
+                        <div class="infosArticle">
+                            <h3 class="mugginsHead patternScieOrange"><a href="article.html">Article 2</a></h3>
+                            <p class="shortDesc">
+                                Un article sur des choses cools
+                            </p>
+                            <ul class="catList">
+                                <li><a href="#food">Food</a></li>
+                            </ul> 
+                        </div>
+                    </div>
+                    <div class="articleMin" style="background-image: url(images/coverSection3.jpg)">
+                        <div class="infosArticle">
+                            <h3 class="mugginsHead patternScieOrange"><a href="article.html">Article 3</a></h3>
+                            <p class="shortDesc">
+                                Un article sur des choses cools
+                            </p>
+                            <ul class="catList">
+                                <li><a href="#design">Design</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="articleMin" style="background-image: url(images/coverSection5.jpg)">
+                        <div class="infosArticle">
+                            <h3 class="mugginsHead patternScieOrange"><a href="article.html">Article 4</a></h3>
+                            <p class="shortDesc">
+                                Un article sur des choses cools
+                            </p>
+                            <ul class="catList">
+                                <li><a href="#social">Social</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="articleMin" style="background-image: url(images/coverSection4.jpg)">
+                        <div class="infosArticle">
+                            <h3 class="mugginsHead patternScieOrange"><a href="article.html">Article 5</a></h3>
+                            <p class="shortDesc">
+                                Un article sur des choses cools
+                            </p>
+                            <ul class="catList">
+                                <li><a href="#food">Food</a> - </li>
+                                <li><a href="#social">Social</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="articleMin" style="background-image: url(images/coverSection.jpg)">
+                        <div class="infosArticle">
+                            <h3 class="mugginsHead patternScieOrange"><a href="article.html">Article 6</a></h3>
+                            <p class="shortDesc">
+                                Un article sur des choses cools
+                            </p>
+                            <ul class="catList">
+                                <li><a href="#design">Design</a> - </li>
+                                <li><a href="#social">Social</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="articleMin" style="background-image: url(images/coverSection3.jpg)">
+                        <div class="infosArticle">
+                            <h3 class="mugginsHead patternScieOrange"><a href="article.html">Article 7</a></h3>
+                            <p class="shortDesc">
+                                Un article sur des choses cools
+                            </p>
+                            <ul class="catList">
+                                <li><a href="#diy">DIY</a> - </li>
+                                <li><a href="#design">Design</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="articleMin" style="background-image: url(images/coverSection4.jpg)">
+                        <div class="infosArticle">
+                            <h3 class="mugginsHead patternScieOrange"><a href="article.html">Article 8</a></h3>
+                            <p class="shortDesc">
+                                Un article sur des choses cools
+                            </p>
+                            <ul class="catList">
+                                <li><a href="#food">Food</a> - </li>
+                                <li><a href="#social">Social</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section js-showMenu" id="blogBody">
+            <div class="container">
+                <div class="row">
+                   <div class="col-md-8 col-sm-8" id="blogArticle">
+                       <article class="theArticle">
+                           
+                           <div class="aroundTitle">
+                               <h2 class="mugginsHead patternPlot3Orange">Ralph le Nain, le fondateur</h2>
+                           </div>
+
+                           <div class="articleBody">
+                               <h3 class="mugginsHead patternScieOrange">Ses origines</h3>
+                               <p>
+                                   You wanna know how I got these scars? My father was... a drinker, and a fiend. And one night, he goes off crazier than usual. Mommy gets the kitchen knife to defend herself. He doesn't like that, not one bit. So, me watching he takes the knife to her, laughing while he does it. He turns to me and he says: "Why so serious?". He comes at me with the knife "Why so serious?". He sticks the blade in my mouth. "Let's put a smile on that face." and... Why so serious?
+                               </p>
+                               
+                               <h4 class="mugginsHead patternScieGrey">La vie dans la mine</h4>
+                               <p>
+                                   My name is Merely Ducard but I speak for Ra's al Ghul... a man greatly feared by the criminal underworld. A mon who can offer you a path. Someone like you is only here by choice. You have been exploring the criminal fraternity but whatever your original intentions you have to become truly lost. The path of a man who shares his hatred of evil and wishes to serve true justice. The path of the League of Shadows.
+                               </p>
+                               <h5 class="mugginsHead patternPlotLitteOrange">Une vocation</h5>
+                               <p>
+                                   Seven hundred twelve counts of extortion. Eight hundred and forty-nine counts of racketeering. Two hundred and forty-six counts of fraud. Eighty-seven counts of conspiracy murder.Five hundred and twenty-seven counts of obstruction of justice. How do the defendants plead?
+                               </p>
+                               <h6 class="mugginsHead patternPlotLitteGrey">Le sucre et l'Or</h6>
+                               <p>
+                                   My name is Merely Ducard but I speak for Ra's al Ghul... a man greatly feared by the criminal underworld. A mon who can offer you a path. Someone like you is only here by choice.
+                               </p>
+                           </div>
+
+                            <nav class="navPagination">
+                              <ul class="pagination">
+                                <li>
+                                  <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                  </a>
+                                </li>
+                                <li class="allspace"></li>
+                                <li>
+                                  <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </nav>
+
+                       </article>
+
+                       <div class="sectionSeparator">
+                           <h2 class="mugginsHead">
+                               Be Social !
+                           </h2>
+                       </div>
+
+                        <div class="commentArea">
+                             <form action="">
+                                 <div class="group">
+                                     <label for="nom">Nom </label>
+                                     <input type="text" placeholder="" name="nom">    
+                                 </div>
+                                 
+                                 <div class="group">
+                                     <label for="mail">Mail </label>
+                                     <input type="mail" placeholder="" name="mail">
+                                 </div>
+
+                                 <div class="group">
+                                     <label class="forTxtArea" for="comz">Commentaire </label>
+                                     <textarea name="comz" placeholder="Votre commentaire"></textarea>
+                                 </div>
+                                 <div class="group forsubmit">
+                                     <button type="submit" class="btn mugginsBtnOB">
+                                         <span>Commenter</span>
+                                         <span class="hiddenTxt">BlaBlaBla !</span>
+                                     </button>
+                                 </div>   
+                             </form>
+                        </div>
+
+                   </div>
+                   
+                    <div class="col-md-4 col-sm-4" id="blogSidebar">
+
+                        <div class="sidebarElement authorDesc">
+                            <h3 class="mugginsHead patternScieGrey">L'auteur</h3>
+                            <div class="imgAuthor">
+                                <img src="images/arya.jpg" class="img-responsive">
+                            </div>
+                            <p>
+                                Arya Stark est l'archetype de la fille volontaire et guerrière. Elle sait comment on prend un taureau par les cornes et comment on sort des gâteaux du four !
+                            </p>
+                        </div>
+
+                        <div class="sidebarElement blogTwitter hidden-xs">
+                            <h3 class="mugginsHead patternScieGrey">On est connecte <i class="fa fa-twitter"></i></h3>
+                            <blockquote class="mugginsQuote">
+                                <p>Le <span class="hashtag">#Melty</span> est le meilleur mugcake qu'on puisse imaginer et c'est chez <span class="hashtag">@QuicknMuggins</span></p>
+                                <footer>@WebDesignFunky</footer>
+                                <div class="patternScieOrange"></div>
+                            </blockquote>
+                        </div>
+
+                        <div class=" sidebarElement blogCategories">
+                            <h3 class="mugginsHead patternScieGrey">Categories</h3>
+                            <ul>
+                                <li><a href="#food">Food</a></li>
+                                <li><a href="#diy">DIY</a></li>
+                                <li><a href="#design">Design</a></li>
+                                <li><a href="#social">Social</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="mugginsFooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Quick'n'<span class="mugginsOrangeText">Muggin's</span></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                        <p class="socialFooter">Mugcakes for the people since 2015</p>
+                        <p>
+                            Ouverture : du Lundi au Samedi - 9h30 à 20h30
+                            <br>
+                            36 Boulevard de la Bastille - 75012 Paris
+                            <br>
+                            Metro : <span class="badge metroLabel" style="background: #FFCE00">1</span> <span class="badge metroLabel" style="background: #F19042">5</span> <span class="badge metroLabel" style="background: #CDACCE">8</span>
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <div class="socialFooter">
+                            <p>Amour <span style="font-weight:bold">X</span> Cholocat <span style="font-weight:bold">X</span> Follow</p>
+                            
+                            <div class="socialLinks">
+                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </body>
+</html>

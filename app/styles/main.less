@@ -1,7 +1,8 @@
 @import "variables.less";
 @import "utils.less";
+@import "mugginsComponents.less";
 @import "strapboot.less";
-
+@import "patterns.less";
 .sectionSeparator{
 	border : none;
 	background: @mugginsOrange;
@@ -15,30 +16,40 @@
 	border-left: none;
 	border-right: none;
 }
+
+.img-responsive{
+	margin: 0 auto;
+}
+
 .mugginsQuote{
 	border-left-color: @mugginsOrange; 
+	border: none;
+	background: #fff;
 	footer{
 		font-family: @MoonType;
 		font-weight: bold;
 	}
 }
 
-@import "navbar.less";
-@import "home.less";
-@import "mapSection.less";
-@import "footer.less";
-
-
-.sectionPara{
-	background: #222;
-	color: #fff;
-	padding: 8px;
-	font-size: 1.1em;
-	margin-bottom: 8px;
+a{
+	color:@mugginsOrange;
 }
 
+@import "navbar.less";
+@import "home.less";
+@import "recettes.less";
+@import "produit.less";
+@import "blog.less";
+@import "commander.less";
+@import "mug.less";
+@import "footer.less";
 
-
-/* body{
-	font-family: @MoonType, Lato, sans-serif;
-} */
+.sectionPara{
+	
+	background: #222;
+	color: #fff;
+	padding: 8px 14px;
+	font-size: 1.1em;
+	margin-bottom: 25px;
+	line-height: 1.5em;
+}

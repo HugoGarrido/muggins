@@ -1,0 +1,69 @@
+.mugginsBtn{
+	font-family: @MoonType;
+	font-weight: bold;
+	background: none;
+	/* border: 4px solid #fff; */
+	border: 2px solid #fff;
+	border-radius: 8px;
+	margin-bottom: 15px;
+	white-space: normal !important;
+	&:hover, &:active{
+		border-color: transparent;
+  		background: @mugginsOrange;
+  		transition-duration : 0.2s;
+  		transition-timing-function : ease-out;
+	}
+
+	&:focus{
+		background-color: @mugginsOrange !important;
+	}
+	span{
+		.visibleInline;
+	}
+
+	.hiddenTxt{
+		font-size: inherit !important;
+	}
+
+	.visibleIcon{
+		display: inline;
+		opacity: 1;
+	}
+
+	i, .hiddenTxt{
+		.hidden;
+	}
+
+	&:hover i, &:active i, &:hover .hiddenTxt, &:active .hiddenTxt{
+		.visibleInline;
+		font-size: 25px;
+	}
+
+	&:hover span, &:active span{
+		.hidden
+	}
+}
+
+.mugginsBtnBlack{
+	.mugginsBtn;
+	border-color: #000;
+	color: #000;
+}
+
+.mugginsBtnOB{
+	.mugginsBtn;
+	&:hover, &:active{
+		background: @mugginsGrey;
+	}
+}
+
+
+// RESPONSIVE
+@media (max-width: 991px){
+	.mugginsBtn, .mugginsBtnOB, .mugginsBtnBlack{
+		width: 50%;
+		margin: 0 auto;
+		padding: 25px 0px;
+		margin-bottom: 15px;
+	}	
+}

@@ -28,14 +28,23 @@
 			top: 0;
 			width: 7%;
 			height: 100%;
-			font-size: 110px;
+			font-size: 210px;
 			text-align: center;
 			line-height: 220px;
+			line-height: 265px;
+			color: @mugginsGrey;
+			cursor: pointer;
 			&#toRight{
 				right: 0;
 			}
 			&#toLeft{
 				left: 0;
+			}
+
+			&:hover, &:active{
+				background: #fff;
+				.animate;
+				transiton-duration: 0.2s;
 			}
 		}
 	}
@@ -48,11 +57,15 @@
 
 	.promoContainer{
 		.sectionSeparator;
+		.mugginsBtnOB{
+			margin-top: 15px;
+		}
 	}
 
 	.mapSection{
 		position: relative;
 		padding: 36px 0px;
+		background: #f4f4f4;
 		.container{
 			position: relative;
 			z-index: 1000;
@@ -68,28 +81,39 @@
 
 				h3{
 					font-family: @MoonType;
+
+					div{
+						width: auto;
+						padding-right: 42%;
+					}
+				}
+
+				p{
+					margin-bottom: 18px;
 				}
 			}
 		}
+		@import "components/mapSection.less";
+	}
 
-		.mapContainer{
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			z-index: 900;
-			iframe{
-				height: 100%;
-				width: 100%;
 
-				#mapDiv > div > div:nth-child(10) > div > div > div{
-					display: none;
-				}
+	.bgSeparatorSocial{
+		background: #e8862d url(../images/social_bg.svg) no-repeat;
+		padding: 80px 0px;
+		background-position: 0% 31%;
+	}
 
-				#mapDiv > div > div:nth-child(6) > div > div{
-					display: none !important;
-				}
-			}
+	.bgSeparatorPeople{
+		background: #e8862d url(../images/people_bg.svg);
+		background-size: cover;
+		padding: 80px 0px;
+		background-repeat: no-repeat;
+		background-position: center 77%;
+	}
+
+	@media (max-width: 990px){
+		.titleLogo{
+			margin-top: 80px;
 		}
 	}
 }

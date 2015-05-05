@@ -1,0 +1,49 @@
+#mugginsMug{
+
+	.container-fluid{
+		background: #f4f4f4;
+	}
+
+	.hulk{
+		background: url('../images/bg_hulk.svg') center no-repeat @mugginsOrange;
+  		//background-size: contain;
+  		
+	}
+
+	.vampire{
+		background: url('../images/bg_vampire.svg') center no-repeat @mugginsGrey;
+  		//background-size: contain;
+	}
+
+	.collectMug{
+		min-height: 265px;
+		color: #fff;
+		text-align: center;
+		margin: 25px 0;
+		h2{
+			width: 50%;
+			margin: 0 auto 5px;
+			padding-top: 35px;
+			a{
+				.animate;
+				transition-duration: 0.2s;
+				&:hover, &:active, &:focus{
+					color: inherit;
+				}
+			}
+		}
+
+		.date{
+			font-size: 1.4em;
+			font-style: italic;
+			padding-bottom: 25px;
+		}
+
+		p{
+			width: 50%;
+			margin: 0 auto; 
+			font-size: 1.2em;
+			padding-bottom: 15px;
+		}
+	}
+}
